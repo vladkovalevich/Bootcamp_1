@@ -198,7 +198,7 @@ ul {
 
 .header .menu-icon .navicon {
   display: block;
-  background: rgb(165, 30, 30);
+  background: rgb(0, 162, 255);
   width: 20px;
   height: 2px;
   position: relative;
@@ -469,7 +469,7 @@ ul {
   flex-flow: row;
   align-items: center;
   color: white;
-  background: #535353 url(../images/16.jpeg);
+  background: #00d3f8 ;
   background-blend-mode: soft-light;
   background-position: center;
   background-size: cover;
@@ -542,7 +542,7 @@ ul {
 .ant-carousel-element p::before {
   content: "";
   position: absolute;
-  border: 1px solid rgb(198, 233, 158);
+  border: 1px solid rgb(3, 238, 255);
 
   /* изменены длина псевдоэлемента 
   и параметры позиционирования*/
@@ -598,7 +598,7 @@ div.ant-carousel-arrow-right {
   /* изменено позиционирование элемента */
   display: flex;
   flex-flow: column;
-
+  color: aquamarine;
   margin: 0 20px;
   text-align: center;
   font-family: "Gotham Pro";
@@ -616,7 +616,7 @@ div.ant-carousel-arrow-right {
   left: 38%;
   font-size: 118px;
   font-family: "Coustard Regular";
-  color: rgb(198, 233, 158);
+  color: rgb(0, 255, 200);
 }
 
 .s4_list {
@@ -627,7 +627,7 @@ div.ant-carousel-arrow-right {
   font-family: "OpenSans";
   font-size: 14px;
   line-height: 26px;
-  color: #6c6e79;
+  color: #1aa89ca9;
   padding-top: 44px;
   padding-bottom: 66px;
   position: relative;
@@ -637,7 +637,7 @@ div.ant-carousel-arrow-right {
   content: "";
   position: absolute;
   display: block;
-  border: 1px solid rgb(198, 233, 158);
+  border: 1px solid rgb(2, 217, 255);
 
   /* изменена высота псевдоэлемента */
   height: 170px;
