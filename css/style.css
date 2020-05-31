@@ -1,35 +1,45 @@
-
 /* тут подключаем файлы шрифтов из папки fonts */
 @font-face {
   font-family: "OpenSans";
-  src: url(/fonts/OpenSans-Regular.eot) format("embedded-opentype"),
-    url(/fonts/OpenSans-Regular.ttf) format("truetype"),
-    url(/fonts/OpenSans-Regular.woff) format("woff");
+  src: url(../fonts/OpenSans-Regular.eot) format("embedded-opentype"),
+    url(../fonts/OpenSans-Regular.ttf) format("truetype"),
+    url(../fonts/OpenSans-Regular.woff) format("woff");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "OpenSans Bold";
-  src: url(/fonts/OpenSans-Bold.eot) format("embedded-opentype"),
-    url(/fonts/OpenSans-Bold.ttf) format("truetype"),
-    url(/fonts/OpenSans-Bold.woff) format("woff");
+  src: url(../fonts/OpenSans-Bold.eot) format("embedded-opentype"),
+    url(../fonts/OpenSans-Bold.ttf) format("truetype"),
+    url(../fonts/OpenSans-Bold.woff) format("woff");
   font-style: normal;
   font-weight: bold;
 }
 
 @font-face {
   font-family: "Gotham Pro Bold";
-  src: url(/fonts/GothamPro-Bold.eot) format("embedded-opentype"),
-    url(/fonts/GothamPro-Bold.ttf) format("truetype"),
-    url(/fonts/GothamPro-Bold.woff) format("woff");
+  src: url("../fonts/GothamPro-Bold.eot") format("embedded-opentype"),
+    url("../fonts/GothamPro-Bold.ttf") format("truetype"),
+    url("../fonts/GothamPro-Bold.woff") format("woff");
   font-style: normal;
   font-weight: bold;
 }
 
+/* @font-face {
+  font-family: 'Gotham Pro Bold';
+  src: url('GothamPro-Bold.eot');
+  src: local('Gotham Pro Bold'), local('GothamPro-Bold'),
+    url('GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
+    url('GothamPro-Bold.woff') format('woff'),
+    url('GothamPro-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+} */
+
 @font-face {
   font-family: "Coustard Regular";
-  src: url(/fonts/Coustard-Regular.ttf) format("truetype");
+  src: url(../fonts/Coustard-Regular.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 }
@@ -57,21 +67,29 @@ ul {
 }
 
 /* СТИЛИ ДЛЯ MOBILE */
-
 /* стили хэдэра */
+.header_wrapper {
+  position: fixed;
+  background: #fff;
+  z-index: 99;
+  width: 100%;
+  top: 15px;
+}
+
 .header_nav {
   display: flex;
-  flex-flow: column;
+  flex-flow: row wrap;
+  justify-content: space-between;
   align-items: center;
+  margin: 0 20px;
+  padding: 20px 0;
 }
 
 .logo {
+  display: flex;
   text-transform: capitalize;
-  color:rgb(0, 0, 0);
-  /* изменила размер верхнего внутреннего отступа */
-  padding-top: 30px;
-
-  padding-bottom: 24px;
+  color: black;
+  padding-left: 50px;
   font-family: "OpenSans";
   font-size: 16px;
   position: relative;
@@ -82,13 +100,13 @@ ul {
   position: absolute;
   width: 46px;
   height: 46px;
-  background-color: yellow;
-  background-image: url(../img/icon_sofa.png);
+  background-color:burlywood;
+  background-image: url(../img/logo.jpg);
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50%;
-  top: 20px;
-  left: -56px;
+  top: -50%;
+  left: 0px;
 }
 
 .logo span {
@@ -96,18 +114,15 @@ ul {
   font-family: "OpenSans Bold";
 }
 
-.nav_list {
-  padding-bottom: 28px;
-}
-
-.nav_list-item {
-  position: relative;
-}
-
 .nav_list-item a:hover,
 .nav_list-item a:focus {
-  color:yellow;
+  color: rgb(27, 18, 48);
   font-size: large;
+}
+
+.nav_list-item:last-child {
+  position: relative;
+  padding-right: 25px;
 }
 
 .nav_list-item:last-child::before {
@@ -118,13 +133,127 @@ ul {
   background-image: url(../img/icon_viber.png);
   background-repeat: no-repeat;
   background-position: center;
-  left: -24px;
+  right: 0%;
+  top: 47%;
 }
 
 .nav_list-item a {
   color: black;
   font-family: "OpenSans Bold";
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.header {
+  /* box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1); */
+  z-index: 3;
+}
+
+.header ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: inherit;
+  overflow: hidden;
+}
+
+.header li {
+  padding-top: 20px;
+}
+
+.header li a {
+  display: block;
+  padding: 2px 5px;
+  border: 1px solid #201f1f;
+  color: #535353;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: "OpenSans";
+}
+
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #8f5050;
+  font-weight: bold;
+}
+
+/* menu */
+/* задаем параметры для списка навигации при гамбургере */
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+/* обертка гамбургера */
+.header .menu-icon {
+  display: flex;
+  border: 1px solid;
+  padding: 10px;
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+}
+
+.header .menu-icon .navicon {
+  display: block;
+  background: rgb(165, 30, 30);
+  width: 20px;
+  height: 2px;
+  position: relative;
+}
+
+.header .menu-icon .navicon::before,
+.header .menu-icon .navicon::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+
+.header .menu-icon .navicon::before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon::after {
+  top: -5px;
+}
+
+.header .menu-icon .navicon {
+  transition: background 0.2s ease-out;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  transition: all 0.2s ease-out;
+}
+
+.header .menu-btn:checked~.menu {
+  max-height: 100%;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+.header .menu-btn {
+  display: none;
 }
 
 /* стили секции 1 */
@@ -134,7 +263,7 @@ ul {
   align-items: flex-start;
   color: white;
   /* задаем фон с указанием цвета наложенияи пути к изображению */
-  background: #535353 url(../img/s1_background.png);
+  background-color: darkcyan;
   /* добавляем формат наложения цвета на изображение */
   background-blend-mode: soft-light;
   /* центрируем изображение */
@@ -144,7 +273,7 @@ ul {
   /* background-repeat: no-repeat; */
   /* масштабирование фонового изображения под размер секции */
   background-size: cover;
-
+  padding-top: 150px;
   /* БОНУС */
   /* background-image: linear-gradient(
       to right,
@@ -187,6 +316,7 @@ ul {
   margin: 0 auto;
   padding-bottom: 66px;
   position: relative;
+  padding-right: 20px;
 }
 
 /* псевдоэлементы, создающие стрелку внизу секции
@@ -197,17 +327,19 @@ ul {
   content: "/";
   position: absolute;
   font-size: 32px;
+  line-height: 32px;
   font-weight: bold;
-  color: rgb(198, 233, 158);
+  color: white;
 }
 
 .s1_bottom-element::before {
-  transform: rotate(-63deg);
-  left: -16px;
+  transform: rotate(-66deg);
+  left: -17px;
 }
 
+
 .s1_bottom-element::after {
-  transform: rotate(26deg);
+  transform: rotate(30deg);
 }
 
 .s1_list-item {
@@ -224,7 +356,7 @@ ul {
   width: 16px;
   height: 16px;
 
-  background-image: url(../img/icon_star.png);
+  background-image: url(../images/icons/s1_2.png);
   background-repeat: no-repeat;
   background-position: center;
   top: 3px;
@@ -232,7 +364,7 @@ ul {
 }
 
 .s1_list-item span {
-  color:yellow;
+  color: rgb(198, 233, 158);
 }
 
 /* стили секции 2 */
@@ -267,7 +399,7 @@ ul {
 .s2_list-item {
   width: 170px;
   height: 170px;
-  border: 2px solid yellow;
+  border: 2px solid rgb(198, 233, 158);
   padding-top: 55px;
   position: relative;
   text-align: center;
@@ -277,12 +409,13 @@ ul {
 }
 
 .s2_list-item:hover {
-  border: 10px solid yellow;
+  background-color: black;
+  border: 10px solid rgb(198, 233, 158);
   transform: scale(1.2);
 }
 
 .s2_list-item a:hover {
-  color: rgba(9, 223, 134, 0.623);
+  color: white;
 }
 
 /* добавлен селектор для псевлоэлемента при ховере,
@@ -298,26 +431,26 @@ ul {
   height: 85px;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: yellow;
+  background-color: rgb(198, 233, 158);
   border-radius: 50%;
   top: -41px;
   left: 38px;
 }
 
 .s2_list-item:nth-child(1)::before {
-  background-image: url(../img/s2_icon1.png);
+  background-image: url(../images/icons/s2_icon1.png);
 }
 
 .s2_list-item:nth-child(2)::before {
-  background-image: url(../img/s2_icon2.png);
+  background-image: url(../images/icons/s2_icon2.png);
 }
 
 .s2_list-item:nth-child(3)::before {
-  background-image: url(../img/s2_icon3.png);
+  background-image: url(../images/icons/s2_icon3.png);
 }
 
 .s2_list-item:nth-child(4)::before {
-  background-image: url(../img/s2_icon4.png);
+  background-image: url(../images/icons/s2_icon4.png);
 }
 
 .s2_list-item a {
@@ -527,7 +660,7 @@ div.ant-carousel-arrow-right {
   /* изменено центрирование */
   align-items: center;
 
-  background: url(../img/);
+  background: url(../images/18.jpeg);
   background-position: center;
 }
 
@@ -555,7 +688,7 @@ div.ant-carousel-arrow-right {
   position: absolute;
   width: 32px;
   height: 32px;
-  background-image: url(../img/);
+  background-image: url(../images/icons/s5_icon.png);
   background-position: center;
   background-repeat: no-repeat;
   left: 30px;
@@ -594,7 +727,7 @@ div.ant-carousel-arrow-right {
   position: absolute;
   width: 22px;
   height: 22px;
-  background-image: url(../img/icon_viber.png);
+  background-image: url(../images/insta_oval-icon16.png);
   background-repeat: no-repeat;
   background-position: center;
 
@@ -637,10 +770,11 @@ footer {
     justify-content: space-between;
     margin: 0 40px;
     padding: 34px 0;
+    width: -webkit-fill-available;
   }
 
   .logo {
-    padding: 0;
+    /* padding: 0; */
     padding-left: 55px;
   }
 
@@ -655,21 +789,19 @@ footer {
     padding: 0;
   }
 
-  .nav_list-item:first-child {
-    padding-right: 54px;
-    position: relative;
+  .nav_list-item:last-child {
+    padding-right: 20px;
   }
 
-  .nav_list-item:first-child::after {
-    content: "";
-    position: absolute;
-    border: 1px solid #eaeaea;
-    height: 28px;
-    top: -4px;
-    right: 37px;
+  .nav_list-item:last-child::before {
+    right: 0;
+    top: -10%;
   }
 
   /* стили секции 1 */
+  .s1 {
+    background: #535353 url(../images/s1_back-tablet.jpeg);
+  }
 
   .s1_title {
     font-size: 50px;
@@ -740,6 +872,9 @@ footer {
   }
 
   /* стили секции 3 */
+  .s3 {
+    background: #535353 url(../images/s3_back-tablet.jpeg);
+  }
 
   .ant-carousel {
     position: relative;
@@ -895,13 +1030,18 @@ footer {
     font-size: 20px;
   }
 
+  .nav_list-item:last-child {
+    padding-right: 30px;
+  }
+
   .nav_list-item:last-child::before {
-    left: -30px;
-    top: 3px;
+    left: 77%;
+    top: 0;
   }
 
   /* стили секции 1 */
   .s1 {
+    background: url(../images/s1_back-desk.png);
     background-color: rgb(58, 53, 53);
     background-position: right;
     background-repeat: no-repeat;
@@ -957,6 +1097,9 @@ footer {
   }
 
   /* стили секции 3 */
+  .s3 {
+    background: #535353 url(../images/s3_back-desktop.jpeg);
+  }
 
   .ant-carousel-hider {
     width: 1280px;
@@ -994,5 +1137,100 @@ footer {
     font-size: 236px;
     top: 102%;
     left: 10%;
+  }
+
+  /* стили секции 5 */
+  .s5 {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: auto;
+    padding: 76px 60px 74px 237px;
+    background:url(../img/logo.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-position-x: unset;
+  }
+
+  .s5_list-title,
+  .s5_list,
+  .s5_list li {
+    width: 296px;
+  }
+
+  .s5 div,
+  .s5_list {
+    padding-bottom: 20px;
+  }
+
+  .s5_list-title::after {
+    top: 71%;
+    left: 0;
+  }
+
+  .contacts {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    width: auto;
+  }
+
+  .contacts li {
+    width: auto;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .header li {
+    float: left;
+    display: flex;
+    padding-bottom: 0;
+  }
+
+  .header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  .header li a {
+    padding: 0 5px;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .header .menu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    clear: none;
+    width: -webkit-fill-available;
+    max-height: none;
+    padding-left: 20px;
+  }
+
+  .categories {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    width: 1280px;
+  }
+
+  .header li a {
+    padding: 0 5px;
+    font-size: 16px;
   }
 }

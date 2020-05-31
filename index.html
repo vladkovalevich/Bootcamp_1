@@ -5,118 +5,180 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css">
-    <title>BootCamp 1</title>
+    <!-- <link rel="stylesheet" href="./css/animations.css"> -->
+    <title>Blackview</title>
 </head>
 
 <body>
-    <header class="container">
-        <nav class="header_nav">
-            <a class="logo" href="#">мебель<span>ремсервис</span></a>
-            <ul class="nav_list">
-                <li class="nav_list-item"><a href="#">+38 068 604 46 26</a></li>
-                <li class="nav_list-item"><a href="#">+38 068 954 06 99</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- обертка хэдэра -->
+    <div class="header_wrapper">
+
+        <header class="header container">
+            <nav class="header_nav">
+                <a class="logo" href="#">Blackview<span>Company</span></a>
+
+                <!-- элемент, срабатывающий на нажатие -->
+                <input class="menu-btn" type="checkbox" id="menu-btn" />
+                <!-- элементы для создания внешнего вида гамбургера -->
+                <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+
+                <ul class="menu">
+                    <li><a href="#info">info</a></li>
+                    <li><a href="#gifts">gifts</a></li>
+                    <li><a href="#about">line</a></li>
+                    <li><a href="#careers">line</a></li>
+                    <li><a href="#contact">line</a></li>
+                    <li><a href="#contact">line</a></li>
+                    <li class="nav_list-item"><a href="#">+38 050 071 53 30</a></li>
+                    <li class="nav_list-item"><a href="https://www.facebook.com/aleksandra.hrevtsova.3?ref=bookmarks"
+                            target="_blank"></a></li>
+                </ul>
+            </nav>
+        </header>
+
+    </div>
+
     <main class="container">
         <section class="s1">
-            <h2 class="s1_title">ремонт мебели</h2>
+            <h2 class="s1_title">Лучшая компания смартфоноф</h2>
             <ul class="s1_list">
-                <li class="s1_list-item">изготовление мебели под заказ</li>
-                <li class="s1_list-item"><span>гарантийный сервис</span> для организаций</li>
-                <li class="s1_list-item">использование <span>натуральных</span> материалов</li>
+                <li class="s1_list-item">Телефоны назаз</li>
+                <li class="s1_list-item"><span>Красивые</span> & удобные</li>
             </ul>
+
+            <!-- <div class="drop"></div> -->
+            <!-- добавлен новый элемент для стрелки внизу секции -->
+            <div class="s1_bottom-element"></div>
         </section>
         <section class="s2">
-            <h2 class="s2_title">Ремонт и реставрация мягкой мебели</h2>
+            <!-- <div class="loading"></div> -->
+            <h2 class="s2_title">The most common works</h2>
+            <!-- <div class="circle">
+                <h1>codrops</h1>
+            </div> -->
             <ul class="s2_list">
                 <li class="s2_list-item">
-                    <p>Диваны</p>
+                    <a href="https://mymodernmet.com/wp/wp-content/uploads/2019/12/photos-of-indonesia-rarindra-prakarsa-17.jpg"
+                        target="_blank">Rarindra Prakarsa</a>
+                    <a href="https://mymodernmet.com/wp/wp-content/uploads/2019/12/agora-awards-2019-photography-26.jpg"
+                        target="_blank">Michael Aboya</a>
+                    <a href="https://mymodernmet.com/wp/wp-content/uploads/2019/12/Justin-Mott-Fatu-and-Naji-Final-Story-551.jpg"
+                        target="_blank">Justin Mott</a>
                 </li>
                 <li class="s2_list-item">
-                    <p>Кресла</p>
+                    <a href="https://mymodernmet.com/wp/wp-content/uploads/2019/09/Style-of-Movement-NYC-Dance-Project-8.jpg"
+                        target="_blank">© NYC Dance Project</a>
+                    <a href="https://mymodernmet.com/wp/wp-content/uploads/2019/09/felicia-saunders-breastfeeding-promo-1.jpg"
+                        target="_blank">Felicia Saunders</a>
+                    <a href="https://mymodernmet.com/wp/wp-content/uploads/2019/12/dancers-and-dogs-photographs-5.jpg"
+                        target="_blank">Ashley Lew and Loki</a>
                 </li>
                 <li class="s2_list-item">
-                    <p>Стулья</p>
+                    <a href="https://mymodernmet.com/wp/wp-content/uploads/2019/09/albert-dros-greenland-2.jpg"
+                        target="_blank">Albert Dros</a>
+                    <a href="https://mymodernmet.com/wp/wp-content/uploads/2019/12/matt-molloy-sky-photographs-20.jpg"
+                        target="_blank">Matt Molloy</a>
+                    <a href="https://mymodernmet.com/wp/wp-content/uploads/2019/12/christian-spencer-hummingbird-photography-3.jpg"
+                        target="_blank">Christian Spencer</a>
                 </li>
                 <li class="s2_list-item">
-                    <p>Раскладные
-                        диваны</p>
+                    <a href="https://mymodernmet.com/wp/wp-content/uploads/2019/12/simeon-pratt-drone-photography-6.jpg"
+                        target="_blank">Simeon Pratt</a>
+                    <a href="https://mymodernmet.com/wp/wp-content/uploads/2019/12/ben-simon-rehn-iceland-abstract-photography-2.jpg"
+                        target="_blank">Ben Simon Rehn</a>
+                    <a href="https://mymodernmet.com/wp/wp-content/uploads/2019/03/andrew-mccarthy-mineral-moon-1024x1024.jpg"
+                        target="_blank">Andrew McCarthy</a>
                 </li>
             </ul>
         </section>
         <section class="s3 ant-carousel">
             <div class="ant-carousel-hider">
+                <!-- изменено положение элемента для левой стрелки -->
+                <div class="ant-carousel-arrow-left"></div>
                 <ul class="ant-carousel-list">
-                    <li class="ant-carousel-element"><img src="./img/s5_before.jpg" alt="img-1">
-                        <p>До</p>
-                    </li>
-                    <li class="ant-carousel-element"><img src="./img/s5_before.jpg" alt="img-2">
-                        <p>После</p>
-                    </li>
-                    <li class="ant-carousel-element"><img src="./img/s5_before.jpg" alt="img-3">
+                    <li class="ant-carousel-element"><img src="./images/14.jpeg" alt="img-1">
                         <p>Description</p>
                     </li>
-                    <li class="ant-carousel-element"><img src="./img/s5_before.jpg" alt="img-4">
+                    <li class="ant-carousel-element"><img src="./images/5.jpeg" alt="img-2">
                         <p>Description</p>
                     </li>
-                    <li class="ant-carousel-element"><img src="./img/s5_before.jpg" alt="img-5">
+                    <li class="ant-carousel-element"><img src="./images/15.jpeg" alt="img-3">
                         <p>Description</p>
                     </li>
-                    <li class="ant-carousel-element"><img src="./img/s5_before.jpg" alt="img-6">
+                    <li class="ant-carousel-element"><img src="./images/6.jpeg" alt="img-4">
+                        <p>Description</p>
+                    </li>
+                    <li class="ant-carousel-element"><img src="./images/17.jpeg" alt="img-5">
+                        <p>Description</p>
+                    </li>
+                    <li class="ant-carousel-element"><img src="./images/18" alt="img-6">
                         <p>Description</p>
                     </li>
                 </ul>
+                <!-- элемент левой стрелки перемещен вверх, перед списком -->
+                <div class="ant-carousel-arrow-right"></div>
             </div>
-            <div class="ant-carousel-arrow-left"></div>
-            <div class="ant-carousel-arrow-right"></div>
             <div class="ant-carousel-dots"></div>
         </section>
         <section class="s4">
-            <p class="s4_decs">Предлагаем индивидуальные решение! Налюбой вкус , размер , фасон и кошелекЮ </p>
+            <p class="s4_desc">I want to share you practical tips, insights, and advice on how to be a more ‘artistic’
+                photographer.</p>
             <ul class="s4_list">
-                <li class="s4_list-item">- Интерьерные решения</li>
-                <li class="s4_list-item">- Сборка и разборка мебели</li>
-                <li class="s4_list-item">- Обслуживание мебели</li>
-                <li class="s4_list-item">- Ремонт и обслуживание шкафов-купе</li>
-                <li class="s4_list-item">- Перевозка ,доставка и установка мебели</li>
+                <li class="s4_list-item">- Is photography art?</li>
+                <li class="s4_list-item">- Why do you shoot photos?</li>
+                <li class="s4_list-item">- What makes photography different from painting or other arts?</li>
+                <li class="s4_list-item">- What is your style?</li>
+                <li class="s4_list-item">- Don’t specialize in your photography</li>
+                <!-- внимание! добавлен шестой элемент списка -->
+                <li class="s4_list-item">- What camera should I shoot with?</li>
             </ul>
         </section>
+
         <section class="s5">
+
             <ul class="s5_list list-noTitle">
-                <li>Ремонт корпусной и офисной мебели</li>
-                <li>Ремонт двухспальных кроватей и матрасов</li>
-                <li>Ремонт и реставрация деревянной мебели</li>
-                <li>Ремонт кухонной мебели</li>
-            </ul>
-            <h3 class="s5_list-title">ремонт мебели спецназначения</h3>
-            <ul class="s5_list list-special">
-                <li>Парикмахерские</li>
-                <li>Салоны красоты</li>
-                <li>Торговое оборудование</li>
-                <li>Медицинские учереждения</li>
-            </ul>
-            <h3 class="s5_list-title">ремонт уличной мебели</h3>
-            <ul class="s5_list list-outside">
-                <li>Мебель для терасс</li>
-                <li>Дачная мебель</li>
-                <li>Зона отдыха</li>
-            </ul>
-            <h3 class="s5_list-title">контакты</h3>
-            <ul class="s5_list-contacts contacts">
-                <li class="s5_list-title"><a href="#">+38 068 604 46 26</a>
-                    <p>(Валерий)</p>
+                <li>“Why do I take photos?”</li>
+                <li>“Not every shoe fits every foot.”</li>
+                <li>“Sometimes you need to milk the cow a lot to get a little bit of cheese.”
                 </li>
-                <li class="s5_list-title"><a href="#">+38 068 954 06 99</a>
-                    <p>(Елена)</p>
-                </li>
+                <li>“When I think I ‘got’ the photo; I don’t.”</li>
             </ul>
-        </section>
+            <!-- добавлена обертка для заголовка и списка -->
+            <div>
+                <h3 class="s5_list-title">All killer, no filler</h3>
+                <ul class="s5_list list-special">
+                    <li>Focus on the edges</li>
+                    <li>Get closer</li>
+                    <li>Creative constraints</li>
+                    <li>Consistency and variety</li>
+                </ul>
+            </div>
+            <!-- добавлена обертка для заголовка и списка -->
+            <div>
+                <h3 class="s5_list-title">Time either improves or extinguishes</h3>
+                <ul class="s5_list list-outside">
+                    <li>Pattern recognition</li>
+                    <li>When to be flexible</li>
+                    <li>How to train your eyes</li>
+                </ul>
+            </div>
+            <!-- добавлена обертка для заголовка и списка -->
+            <div>
+                <h3 class="s5_list-title contacts_list-title">contacts</h3>
+                <ul class="s5_list contacts">
+                    <li><a href="https://erickimphotography.com/">Enjoy</a>
+                        <p>Personal Blog</p>
+                    </li>
+                    <li><a href="https://www.instagram.com/erickimphoto/?hl=ru" target="_blank">insta</a>
+                        <p>Eric Kim</p>
+                    </li>
+                </ul>
+            </div>
 
         </section>
     </main>
     <footer class="container">
-        <p>&copy; 2020 | Копирование материалов запрещено</p>
+        <p>&copy; 2017-2020 | Aleksa Hrevtsova All Rights Reserved</p>
     </footer>
 </body>
 
