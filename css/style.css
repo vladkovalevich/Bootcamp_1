@@ -96,13 +96,14 @@ ul {
 }
 
 .logo::before {
-  content: "";
   position: absolute;
-  width: 46px;
-  height: 46px;
-  background-color:burlywood;
-  background-image: url(../img/logo.jpg);
+  width: 56px;
+  height: 56px;
+  background-color: aqua;
+  content: "BV";
+  color: #0460f3;
   background-repeat: no-repeat;
+  background-clip: content-box;
   background-position: center;
   border-radius: 50%;
   top: -50%;
@@ -355,8 +356,6 @@ ul {
   /* изменены размеры */
   width: 16px;
   height: 16px;
-
-  /* background-image: url(../images/icons/s1_2.png); */
   background-repeat: no-repeat;
   background-position: center;
   top: 3px;
@@ -438,19 +437,19 @@ ul {
 }
 
 .s2_list-item:nth-child(1)::before {
-  background-image: url(../img/s2_icon3.png);
+  background-image: url(../img/cell-phone.png);
 }
 
 .s2_list-item:nth-child(2)::before {
-  background-image: url(../images/icons/s2_icon2.png);
+  background-image: url(../img/cell-phone.png);
 }
 
 .s2_list-item:nth-child(3)::before {
-  background-image: url(../images/icons/s2_icon3.png);
+  background-image: url(../img/cell-phone.png);
 }
 
 .s2_list-item:nth-child(4)::before {
-  background-image: url(../images/icons/s2_icon4.png);
+  background-image: url(../img/cell-phone.png);
 }
 
 .s2_list-item a {
@@ -641,7 +640,7 @@ div.ant-carousel-arrow-right {
 
   /* изменена высота псевдоэлемента */
   height: 170px;
-
+  /* background-image: url(../img/cell-phone.png); */
   top: 50px;
   left: 28px;
 }
@@ -660,7 +659,7 @@ div.ant-carousel-arrow-right {
   /* изменено центрирование */
   align-items: center;
 
-  background: url(../images/18.jpeg);
+  /* background: url(../images/18.jpeg); */
   background-position: center;
 }
 
@@ -677,7 +676,7 @@ div.ant-carousel-arrow-right {
   font-family: "OpenSans";
   font-size: 14px;
   line-height: 24px;
-  color: #201f1f;
+  color: #00d3f8;
   position: relative;
 }
 
@@ -688,7 +687,7 @@ div.ant-carousel-arrow-right {
   position: absolute;
   width: 32px;
   height: 32px;
-  background-image: url(../images/icons/s5_icon.png);
+  /* background-image: url(../img/cell-phone.png); */
   background-position: center;
   background-repeat: no-repeat;
   left: 30px;
@@ -702,14 +701,13 @@ div.ant-carousel-arrow-right {
   font-size: 18px;
   line-height: 28px;
   font-weight: bold;
-  color: rgb(65, 41, 10);
   position: relative;
 }
 
 .s5_list-title::after {
   content: "";
   position: absolute;
-  border: 1px solid rgb(198, 233, 158);
+  border: 1px solid rgba(1, 204, 255, 0.931);
   width: 40px;
   top: 62px;
   left: 32px;
