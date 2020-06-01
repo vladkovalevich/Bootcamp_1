@@ -100,7 +100,7 @@ ul {
   width: 56px;
   height: 56px;
   background-color: aqua;
-  content: "BV";
+  content: "BlackView";
   color: #0460f3;
   background-repeat: no-repeat;
   background-clip: content-box;
@@ -611,7 +611,7 @@ div.ant-carousel-arrow-right {
 .s4_desc::before {
   content: "❞";
   position: absolute;
-  top: 48%;
+  top: 34%;
   left: 38%;
   font-size: 118px;
   font-family: "Coustard Regular";
@@ -737,7 +737,7 @@ div.ant-carousel-arrow-right {
 
 .contacts a:hover,
 .contacts a:focus {
-  color: red;
+  color: rgba(0, 255, 191, 0.924);
   font-size: large;
 }
 
@@ -797,9 +797,6 @@ footer {
   }
 
   /* стили секции 1 */
-  .s1 {
-    background: #535353 url(../images/s1_back-tablet.jpeg);
-  }
 
   .s1_title {
     font-size: 50px;
@@ -870,9 +867,7 @@ footer {
   }
 
   /* стили секции 3 */
-  .s3 {
-    background: #535353 url(../images/s3_back-tablet.jpeg);
-  }
+
 
   .ant-carousel {
     position: relative;
@@ -1039,8 +1034,8 @@ footer {
 
   /* стили секции 1 */
   .s1 {
-    background: url(../images/s1_back-desk.png);
-    background-color: rgb(58, 53, 53);
+    /* background: url(../images/s1_back-desk.png);
+    background-color: rgb(58, 53, 53); */
     background-position: right;
     background-repeat: no-repeat;
   }
@@ -1095,9 +1090,6 @@ footer {
   }
 
   /* стили секции 3 */
-  .s3 {
-    background: #535353 url(../images/s3_back-desktop.jpeg);
-  }
 
   .ant-carousel-hider {
     width: 1280px;
@@ -1144,7 +1136,7 @@ footer {
     align-items: flex-start;
     height: auto;
     padding: 76px 60px 74px 237px;
-    background:url(../img/logo.jpg);
+    /* background:url(../img/logo.jpg); */
     background-position: bottom;
     background-repeat: no-repeat;
     background-position-x: unset;
@@ -1177,58 +1169,4 @@ footer {
     width: auto;
   }
 
-}
-
-@media (min-width: 768px) {
-  .header li {
-    float: left;
-    display: flex;
-    padding-bottom: 0;
-  }
-
-  .header {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-  }
-
-  .header li a {
-    padding: 0 5px;
-  }
-
-  .logo {
-    display: flex;
-    justify-content: center;
-  }
-
-  .header .menu {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    clear: none;
-    width: -webkit-fill-available;
-    max-height: none;
-    padding-left: 20px;
-  }
-
-  .categories {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-  }
-
-  .header .menu-icon {
-    display: none;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    width: 1280px;
-  }
-
-  .header li a {
-    padding: 0 5px;
-    font-size: 16px;
-  }
 }
