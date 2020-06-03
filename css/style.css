@@ -97,22 +97,23 @@ ul {
 
 .logo::before {
   position: absolute;
-  width: 45px;
-  height: 45px;
+  /* width: 45px;
+  height: 45px; */
+  padding: 20px 0 ;
   background-color: aqua;
   content: "BlackView";
   color: #0460f3;
   background-repeat: no-repeat;
-  background-clip: content-box;
   background-position: center;
   border-radius: 50%;
-  top: -50%;
+  top: -92%;
   left: 0px;
 }
 
 .logo span {
   text-transform: uppercase;
   font-family: "OpenSans Bold";
+  padding-left: 25px;
 }
 
 .nav_list-item a:hover,
@@ -778,8 +779,8 @@ footer {
   }
 
   .logo::before {
-    top: -12px;
-    left: 0;
+    top: -21px;
+    left: 5px;
   }
 
   .nav_list {
